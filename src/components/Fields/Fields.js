@@ -4,6 +4,7 @@ import { IconButton } from 'u5-carbon-components-react'
 
 import SelectOne from '../SelectOne'
 import SimpleDate from '../SimpleDate'
+import AutoLocation from '../AutoLocation'
 
 const Field = props => {
   const { field, values, errors, touched, handleChange, handleBlur, setFieldValue, formProps } = props
@@ -46,6 +47,8 @@ const Field = props => {
       )
     case 'date':
       return <SimpleDate {...props} />
+    case 'select-location':
+      return <AutoLocation {...props}/>
     case 'number':
       return (
         <NumberInput
